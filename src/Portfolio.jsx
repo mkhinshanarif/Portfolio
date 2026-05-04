@@ -1517,9 +1517,9 @@ export default function Portfolio() {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 1.8, type: "spring", stiffness: 220 }}
         onClick={() => {
-          const link = document.createElement('a');
-          link.href = 'public/Muhammad_Khinshan_Arif_Resume.pdf'; // Path to file in public folder
-          link.download = 'Muhammad_Khinshan_Arif_Resume.pdf';
+          const link = document.createElement("a");
+          link.href = "/Muhammad_Khinshan_Arif_Resume.pdf"; // must exist in /public
+          link.download = "Muhammad_Khinshan_Arif_Resume.pdf";
           link.click();
         }}
         title="Download Resume"
