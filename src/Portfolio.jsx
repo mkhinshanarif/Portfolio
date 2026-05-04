@@ -1516,12 +1516,14 @@ export default function Portfolio() {
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 1.8, type: "spring", stiffness: 220 }}
-        onClick={() => {
-          const link = document.createElement("a");
-          link.href = "/Muhammad_Khinshan_Arif_Resume.pdf"; // must exist in /public
-          link.download = "Muhammad_Khinshan_Arif_Resume.pdf";
-          link.click();
-        }}
+       onClick={() => {
+  const fileName = "Muhammad_Khinshan_Arif_Resume.pdf"; // must be in /public
+  const url = `${import.meta.env.BASE_URL}${fileName}`;
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = fileName;
+  link.click();
+}}
         title="Download Resume"
       >
         <Download size={15} />
